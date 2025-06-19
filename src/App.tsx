@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Overview from "./components/Overview.tsx";
+import {type Job, WorkHistory} from "./components/WorkHistory.tsx";
+import {Skills} from "./components/Skills.tsx";
+import {ContactForm} from "./components/ContactForm.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const staticJobs: Job[] = [
+        {
+            id: 1,
+            company: 'ABC Web Solutions',
+            role: 'Frontend Developer',
+            period: 'Jan 2019 – Dec 2020',
+            description: 'Built responsive UIs using Vanilla JS and CSS.',
+        },
+        {
+            id: 2,
+            company: 'XYZ Tech',
+            role: 'Full Stack JS Developer',
+            period: 'Jan 2021 – Present',
+            description: 'Developed REST APIs with Express.js and dynamic frontends.',
+        },
+    ];
+
+    return (
+        <div>
+            <h1>Oleksandr Semenets CV</h1>
+            <Overview
+                title="Trainee Full Stack JavaScript Developer"
+                introText="Passionate about building web apps with React, TypeScript, and Express."
+            />
+            <WorkHistory jobs={staticJobs}/>
+            <Skills/>
+            <ContactForm/>
+        </div>
+    )
 }
 
 export default App
