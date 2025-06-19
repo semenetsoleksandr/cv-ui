@@ -6,8 +6,7 @@ interface OverviewProps {
 }
 
 
-
-const Overview: React.FC<OverviewProps> = ({ title, introText }) => {
+const Overview: React.FC<OverviewProps> = ({title, introText}) => {
     return (
         <section>
             <img className="photo cv" src="/photo_cv.png" alt="photo cv"/>

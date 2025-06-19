@@ -2,8 +2,7 @@ import './App.css'
 import Overview from "./components/Overview.tsx";
 import {type Job, WorkHistory} from "./components/WorkHistory.tsx";
 import {Skills} from "./components/Skills.tsx";
-import {ContactForm} from "./components/ContactForm.tsx";
-
+import ContactForm from "./components/ContactForm.tsx";
 function App() {
 
     const staticJobs: Job[] = [

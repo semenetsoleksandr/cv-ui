@@ -1,4 +1,4 @@
-import { type FC, useEffect, useState } from 'react';
+import {type FC, useEffect, useState} from 'react';
 
 interface Skill {
     id: number;
@@ -25,6 +25,7 @@ export const Skills: FC = () => {
                 setLoading(false);
             }
         }
+
         fetchSkills();
     }, []);
     if (loading) {
