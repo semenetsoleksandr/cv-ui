@@ -2,7 +2,7 @@ body {
     background-color: lightgray;
     display: flex;
     justify-content: center;
-
+    min-width: 800px;
 }
 
 h1, h2 {
@@ -13,16 +13,43 @@ li {
     padding-top: 10px;
 }
 
+.photo.cv {
+    width: 100px;
+    float: right;
+    padding: 0;
+}
 div {
     background-color: white;
     margin: auto auto;
-    width: 70%;
-    border-radius: 10px;
-
-}
-
-form {
-    border: 5px solid #999;
     border-radius: 10px;
     padding: 10px;
 }
+
+.contact {
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    width: 95%;
+    margin: auto;
+}
+
+.input-box .field {
+    height: 20px;
+    width: 95%;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+
+}
+
+.input-box .field.mes {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    width: 90%;
+    height: 25px;
+    margin: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
